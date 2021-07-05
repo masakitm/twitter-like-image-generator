@@ -24,11 +24,9 @@ const createTweets = json => {
   })
 }
 
-const renderTarget = document.querySelector('#render')
-
 const renderTweets = tweetDOMList => {
   tweetDOMList.forEach(elem => {
-    renderTarget.appendChild(elem)
+    document.querySelector('#render').appendChild(elem)
   })
 }
 

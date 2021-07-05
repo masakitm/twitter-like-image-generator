@@ -20,7 +20,12 @@ const onClick = () => {
 
 const init = () => {
   tweetRenderer()
-  document.querySelector('#click_to_create_img').addEventListener('click', () => { onClick() })
+  
+  document
+    .querySelector('#click_to_create_img')
+    .addEventListener('click', () => { 
+      onClick()
+    })
 }
 
 window.onload = init()

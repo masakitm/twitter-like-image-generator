@@ -4,7 +4,7 @@
     "user_name": "name",
     "user_id": "id",
     "tweet_text": "some tweet to render",
-    "tweet_img": "img/sample.jpeg",
+    "tweet_img": "img/sample.jpg",
     "time": "time",
     "date": "date",
     "number_rt": 0,

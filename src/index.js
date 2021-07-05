@@ -11,6 +11,8 @@ const getImg = HTMLElement => {
 }
 
 const onClick = () => {
+  scrollTo(0, 0)
+  
   Array.from(document.querySelectorAll('.container')).forEach(elem => {
     getImg(elem)
   })

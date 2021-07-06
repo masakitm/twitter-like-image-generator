@@ -1,5 +1,13 @@
 import tweets from './tweets.json' assert { type: 'json' }
 
+const escapeHTML = string => {
+  return string.replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#x27');
+}
+
 const createDOMTemplate = (tweet, index) => {
   const { 
     user_icon,
@@ -19,7 +27,7 @@ const createDOMTemplate = (tweet, index) => {
 const createTweetList = json => {
   return json.map((tweet, index) => {
     const div = document.createElement('div')
-    div.innerHTML = createDOMTemplate(tweet, index)
+    div.innerHTML = createDOMTemplate(escapeHTML(tweet), index)
     return div
   })
 }
